@@ -75,14 +75,14 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
       id: 2,
       name: "Ceramic Coffee Mug Set",
       price: 32.5,
-      image: "/images/ceramic-mug-set.png",
+      image: "https://i.pinimg.com/736x/67/b2/be/67b2be59f056bfbbf08538c9221d8daf.jpg",
       rating: 4.9,
     },
     {
       id: 5,
       name: "Wooden Serving Tray",
       price: 55.0,
-      image: "/images/wooden-serving-tray.png",
+      image: "https://i.pinimg.com/736x/20/ba/ce/20baceee6e57dd831891cb50ebc7d0bf.jpg",
       rating: 4.8,
     },
   ]
