@@ -13,11 +13,45 @@ export default function HomePage() {
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       try {
+        console.log("Frontend: Fetching products...") // Add logging
         const response = await fetch("/api/products")
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
         const products = await response.json()
+        console.log("Frontend: Products received:", products.length) // Add logging
         setFeaturedProducts(products.slice(0, 3)) // Get first 3 products
       } catch (error) {
-        console.error("Error fetching products:", error)
+        console.error("Frontend Error fetching products:", error)
+        // Fallback to static data if API fails
+        setFeaturedProducts([
+          {
+            id: 1,
+            name: "Handwoven Macrame Wall Hanging",
+            price: 45.99,
+            image_url: "/images/macrame-wall-hanging.png",
+            rating: 4.8,
+            stock_quantity: 15,
+          },
+          {
+            id: 2,
+            name: "Ceramic Coffee Mug Set",
+            price: 32.5,
+            image_url: "/images/ceramic-mug-set.png",
+            rating: 4.9,
+            stock_quantity: 8,
+          },
+          {
+            id: 3,
+            name: "Leather Crossbody Bag",
+            price: 78.0,
+            image_url: "/images/leather-crossbody-bag.png",
+            rating: 4.7,
+            stock_quantity: 5,
+          },
+        ])
       }
     }
 

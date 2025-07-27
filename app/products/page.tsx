@@ -23,6 +23,8 @@ export default function ProductsPage() {
     const fetchProducts = async () => {
       try {
         setLoading(true)
+        console.log("Products page: Fetching products...") // Add logging
+
         let url = "/api/products"
         const params = new URLSearchParams()
 
@@ -32,10 +34,18 @@ export default function ProductsPage() {
         if (params.toString()) url += `?${params.toString()}`
 
         const response = await fetch(url)
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
         const products = await response.json()
+        console.log("Products page: Products received:", products.length) // Add logging
         setAllProducts(products)
       } catch (error) {
-        console.error("Error fetching products:", error)
+        console.error("Products page Error fetching products:", error)
+        // Fallback to empty array or static data
+        setAllProducts([])
       } finally {
         setLoading(false)
       }
