@@ -31,7 +31,7 @@ export default function HomePage() {
             id: 1,
             name: "Handwoven Macrame Wall Hanging",
             price: 45.99,
-            image_url: "https://i.pinimg.com/1200x/c4/44/a8/c444a823e5bdd4c5738a59470f0ba1b1.jpg",
+            image_url: "/images/macrame-wall-hanging.png",
             rating: 4.8,
             stock_quantity: 15,
           },
@@ -39,7 +39,7 @@ export default function HomePage() {
             id: 2,
             name: "Ceramic Coffee Mug Set",
             price: 32.5,
-            image_url: "https://i.pinimg.com/736x/ce/ed/fb/ceedfb7b16afff4f6b72370509d97b1a.jpg",
+            image_url: "/images/ceramic-mug-set.png",
             rating: 4.9,
             stock_quantity: 8,
           },
@@ -47,7 +47,7 @@ export default function HomePage() {
             id: 3,
             name: "Leather Crossbody Bag",
             price: 78.0,
-            image_url: "https://i.pinimg.com/1200x/53/af/12/53af12d033fc40282384394f9acdf46f.jpg",
+            image_url: "/images/leather-crossbody-bag.png",
             rating: 4.7,
             stock_quantity: 5,
           },
@@ -190,7 +190,7 @@ export default function HomePage() {
             <div className="relative group cursor-pointer">
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="https://i.pinimg.com/1200x/1c/f8/16/1cf8161738b8b9d749e5986a96719e68.jpg"
+                  src="/images/jewelry-category.png"
                   alt="Jewelry"
                   width={400}
                   height={300}
@@ -205,7 +205,7 @@ export default function HomePage() {
             <div className="relative group cursor-pointer">
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="https://i.pinimg.com/1200x/96/d9/18/96d918c35869a84a462de450262305a4.jpg"
+                  src="/images/bags-category.png"
                   alt="Bags"
                   width={400}
                   height={300}
@@ -220,7 +220,7 @@ export default function HomePage() {
             <div className="relative group cursor-pointer">
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="https://i.pinimg.com/1200x/08/bb/53/08bb533c7bb5ba011158f672c41301f6.jpg"
+                  src="/images/home-decor-category.png"
                   alt="Home Decor"
                   width={400}
                   height={300}
